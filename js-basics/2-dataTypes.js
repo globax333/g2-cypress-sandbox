@@ -101,3 +101,46 @@ console.log(objArr2.a);
 
 objArr2.a = 5;
 console.log(objArr2.a);
+
+
+const objArr3 = {
+    a: 1,
+    b: 2,
+    c: {
+        someKey: {
+            someKey: 12
+        }
+
+    },
+    d: {
+        somekey: [1, 2, 3]
+
+    }
+
+};
+console.log(objArr3.c.someKey.someKey);
+console.log(objArr3.d[1]);
+
+let sometext = "Hello world";
+console.log(sometext.length);  // вираховує довжину тексту
+console.log(sometext.substring(0, 4)); // Відрізає частину тексту до 4 символа
+console.log(sometext.toLocaleLowerCase()); // Всі букви з маленької
+console.log(sometext.toLocaleUpperCase()); // // Всі букви з великої
+console.log(sometext.indexOf('o')); // Повертає порядковий номер символа
+console.log(sometext.substring(0, sometext.length - 3));
+console.log(sometext.slice(0, 4)); //  Відрізає частину тексту до 4 символа
+console.log(sometext.trim()); // видаляє пробіли і переноси на початку і в кінці
+console.log(sometext.charAt(1)); // виводить символ з індексом 
+console.log(sometext[1]); // виводить символ з індексом 
+
+
+//----------------
+
+let myArr = [];
+myArr.push('Dobrogo vechora') // додовання нового елементу в масив
+myArr.push('Dobrogo ranku')
+
+console.log(myArr.length); // рахує кілікість значень в масиві
+console.log(myArr); 
+console.log(myArr.join(" ")); // зєднує всі значення
+console.log(myArr.pop()); // виводить останній елемент масиву
