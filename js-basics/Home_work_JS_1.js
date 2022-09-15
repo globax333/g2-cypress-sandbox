@@ -34,9 +34,11 @@ const price1 = 500;
 if(price1 < 1000 || price1 > 1900) {
    console.log('ціна товару не знаходиться між 1000 та 1900 включно');}
 
-const price2 = 2000;
-if(price2 != 1000 || price2 <= 999 || price2 != 1900 || price2 >= 1901 ) {
-    console.log('ціна товару не знаходиться між 1000 та 1900 включно');}
+const price2 = 200;
+if(price2 != 1000 && price2 != 1900 && price2 >=1001 && price2 <=1899 ) {
+    console.log('ціна товару не знаходиться між 1000 та 1900 включно')}
+    else {console.log("інша ціна");
+    } 
 
 // # 4
 
