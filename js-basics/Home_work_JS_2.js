@@ -20,10 +20,7 @@ console.log(' Ми йдемо в інше кафе') }
 
 */
 
-const foodFunc = () => {
-    const hamburger = 4,
-    fries = 1;
-
+const foodFunc = (hamburger = 4, fries = 1) => {
     if(hamburger >= 4 && fries >= 1){
         console.log('Ми поїли');}
         else   { (hamburger < 4 && fries < 1)
@@ -45,8 +42,7 @@ console.log('значення ціни товару між 1000 та 1900 вкл
 
 */
  
-const PriceFunc = () => {
-    const price = 1850;
+const PriceFunc = (price = 1850) => {
     if(price >= 1000 && price <= 1900)
     console.log('значення ціни товару між 1000 та 1900 включно');
 }
@@ -71,17 +67,17 @@ if(price2 != 1000 || price2 <= 999 || price2 != 1900 || price2 >= 1901 ) {
     
 */
 
-const Price1Func = () => {
-        const price1 = 500;
+const Price1Func = (price1 = 1200) => {
     if(price1 < 1000 || price1 > 1900)
     console.log('ціна товару не знаходиться між 1000 та 1900 включно');
+    else console.log(price1);
 }
 Price1Func();
 
-const Price1Func2 = () => {
-    const price2 = 500;
-if(price2 != 1000 || price2 <= 999 || price2 != 1900 || price2 >= 1901 )
+const Price1Func2 = (price2 = 500) => {
+if(price2 != 1000 && price2 != 999 && price2 >= 1001 && price2 <= 1899 )
 console.log('ціна товару не знаходиться між 1000 та 1900 включно');
+else console.log(price2)
 }
 Price1Func2();
 
@@ -109,8 +105,7 @@ console.log('autumn'); }
 */
 
 
-const SeasonFunc = () => {
-    let season =4;
+const SeasonFunc = (season = 4) => {
     if( season === 1) {
         console.log('winter');
         } else if ( season === 2) {
@@ -147,10 +142,7 @@ c = 3;
     }
 */
 
-const MiddleNumFUnc = () => {
-    let a = 2,
-    b = 1,
-    c = 3;
+const MiddleNumFUnc = (a = 2, b = 1, c = 3) => {
     if ((a - b) * (c - a) >= 0) {              
         console.log(a);
     } else if ((b - a) * (c - b) >= 0) {       
@@ -197,8 +189,7 @@ case 7:
 */
 
 
-const WeekFunc = () => {
-    let week_number = 4;
+const WeekFunc = (week_number = 4) => {
     switch(week_number) {
         case 1:
             console.log('Monday')
@@ -251,11 +242,7 @@ console.log(c);
 
 */
 
-const MathFunc = () => {
-    let math = 4,
-    a1 = 2,
-    b1 = 4;
-    c = 0;
+const MathFunc = (math = 4, a1 = 2, b1 = 4, c = 0) => {
 switch(math) {
 case 1: c = a1 + b1;
 break;
@@ -281,14 +268,16 @@ let result = sometext.replace("Hello", 'hll');
 console.log(result);
 
 */
-const TextFunc = () => {
-    let sometext = "Hello";
-    let result = sometext.replace("Hello", 'hll');
-    console.log(result);
+const TextFunc = (sometext= "Hello", result, result1, result2, result3) => {
+     result = sometext.substring(0, sometext.length - 1)
+     result1 = sometext.substring(2, 4)
+     result2 = sometext.substring(0, 1)
+     result3 = result2 + result1;
+    console.log(result3);
 }
 TextFunc();
 
-
+/// console.log(sometext.substring(0, sometext.length - 3));
 // # 9
 
 /*  Використовуючи оператор if реалізувати логіку переводу метрів в кілометри,
