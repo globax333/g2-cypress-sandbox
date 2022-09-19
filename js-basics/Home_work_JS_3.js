@@ -144,7 +144,8 @@ console.log('My name is', object.name, object.surname, 'I\'m', object.age, 'year
   * 3. У функції реалізуйте логіку: якщо назва властивості (ключ) дорівнює key3 або key10
   *     то виводьте значення властивості в консоль.
   */
-    const myObject = {
+   
+     const myObject = {
         key1: true,
         key5: 10,
         key3: 'abc',
@@ -189,6 +190,33 @@ console.log('My name is', object.name, object.surname, 'I\'m', object.age, 'year
 
  */
 
+ products = [
+  { productId: 1355, name: 'phone' },
+  { productId: 5131, name: 'laptop' },
+  { productId: 6134, name: 'tablet' },
+ ]
+let number = 1355;
+
+ const findProductById = () => {
+  switch(number){
+    case 1355:
+        console.log('phone')
+        break;
+    case 5131:
+        console.log('laptop')
+        break;
+    case 6134:
+        console.log('tablet')
+        break;
+}
+if(number !=1355 && number != 5131 && number !=6134 ){
+  console.log('undefined')
+}
+ };
+
+ findProductById();
+
+
 
 /** ЗАВДАННЯ 9
  *
@@ -220,3 +248,7 @@ console.log('My name is', object.name, object.surname, 'I\'m', object.age, 'year
   * Підказка 2: Ви повинні використовувати два параметри в колбек функції "element", "index"
   * Підказка 3: Кожен елемент масиву, крім першого, слід порівнювати з попереднім
   */
+
+
+
+ //-------------------немаю рішення--------------------------------------------
