@@ -12,12 +12,10 @@
     
     const hamburger = 4,
     fries = 1;
-
 if(hamburger >= 4 && fries >= 1) {
 console.log('Ми поїли');}
 else   { (hamburger < 4 && fries < 1)
 console.log(' Ми йдемо в інше кафе') } 
-
 */
 
 const foodFunc = (hamburger = 4, fries = 1) => {
@@ -35,11 +33,9 @@ foodFunc();
 Результат виводити в консоль. */
 
 /*
-
 const price = 1850;
 if(price >= 1000 && price <= 1900) {
 console.log('значення ціни товару між 1000 та 1900 включно');}
-
 */
  
 const PriceFunc = (price = 1850) => {
@@ -56,11 +52,9 @@ PriceFunc();
 Результат виводити в консоль. */
 
 /*
-
 const price1 = 500;
 if(price1 < 1000 || price1 > 1900) {
    console.log('ціна товару не знаходиться між 1000 та 1900 включно');}
-
 const price2 = 2000;
 if(price2 != 1000 || price2 <= 999 || price2 != 1900 || price2 >= 1901 ) {
     console.log('ціна товару не знаходиться між 1000 та 1900 включно');} 
@@ -88,9 +82,7 @@ Price1Func2();
 Результат виводити в консоль. */
 
 /* 
-
 let season = 4;
-
 if( season === 1) {
 console.log('winter');
 } else if ( season === 2) {
@@ -101,7 +93,6 @@ console.log('summer');
 }
 else if ( season === 4) {
 console.log('autumn'); } 
-
 */
 
 
@@ -132,7 +123,6 @@ SeasonFunc();
 let a = 2,
 b = 1,
 c = 3;
-
     if ((a - b) * (c - a) >= 0) {              // a >= b and a <= c OR a <= b and a >= c
         console.log(a);
     } else if ((b - a) * (c - b) >= 0) {       // b >= a and b <= c OR b <= a and b >= c
@@ -162,7 +152,6 @@ MiddleNumFUnc();
 
 /*
 let week_number = 4;
-
 switch(week_number) {
 case 1:
     console.log('Monday')
@@ -223,7 +212,6 @@ WeekFunc();
 Результат виводити в консоль. */ 
 
 /* 
-
 let math = 4,
     a1 = 2,
     b1 = 4;
@@ -239,7 +227,6 @@ case 4: c = a1 * b1;
 break;
 }
 console.log(c);
-
 */
 
 const MathFunc = (math = 4, a1 = 2, b1 = 4, c = 0) => {
@@ -266,7 +253,6 @@ MathFunc();
 let sometext = "Hello";
 let result = sometext.replace("Hello", 'hll');
 console.log(result);
-
 */
 const TextFunc = (sometext= "Hello", result, result1, result2, result3) => {
      result = sometext.substring(0, sometext.length - 1)
