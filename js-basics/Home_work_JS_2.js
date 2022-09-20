@@ -7,22 +7,43 @@
     то виводити в консоль текст "Ми йдемо в інше кафе"
     (Змінні типу інтеджер містять кількість продуктів в наявності у вигляді вхідних даних) */ 
 
+    
+/*
+    
     const hamburger = 4,
     fries = 1;
-
 if(hamburger >= 4 && fries >= 1) {
 console.log('Ми поїли');}
 else   { (hamburger < 4 && fries < 1)
-console.log(' Ми йдемо в інше кафе') }
+console.log(' Ми йдемо в інше кафе') } 
+*/
+
+const foodFunc = (hamburger = 4, fries = 1) => {
+    if(hamburger >= 4 && fries >= 1){
+        console.log('Ми поїли');}
+        else   { (hamburger < 4 && fries < 1)
+            console.log(' Ми йдемо в інше кафе') }
+}
+foodFunc();
+
 
 // # 2
 
 /* Напишіть умовну конструкцію if, що перевіряє, чи знаходиться значення ціни товару між 1000 та 1900 включно.
 Результат виводити в консоль. */
 
+/*
 const price = 1850;
 if(price >= 1000 && price <= 1900) {
 console.log('значення ціни товару між 1000 та 1900 включно');}
+*/
+ 
+const PriceFunc = (price = 1850) => {
+    if(price >= 1000 && price <= 1900)
+    console.log('значення ціни товару між 1000 та 1900 включно');
+}
+PriceFunc();
+
 
 // # 3
 
@@ -30,21 +51,38 @@ console.log('значення ціни товару між 1000 та 1900 вкл
 Реалізуйте два варіанти, один з оператором НЕ !, а інший без цього оператора.
 Результат виводити в консоль. */
 
+/*
 const price1 = 500;
 if(price1 < 1000 || price1 > 1900) {
    console.log('ціна товару не знаходиться між 1000 та 1900 включно');}
-
 const price2 = 2000;
 if(price2 != 1000 || price2 <= 999 || price2 != 1900 || price2 >= 1901 ) {
-    console.log('ціна товару не знаходиться між 1000 та 1900 включно');}
+    console.log('ціна товару не знаходиться між 1000 та 1900 включно');} 
+    
+*/
+
+const Price1Func = (price1 = 1200) => {
+    if(price1 < 1000 || price1 > 1900)
+    console.log('ціна товару не знаходиться між 1000 та 1900 включно');
+    else console.log(price1);
+}
+Price1Func();
+
+const Price1Func2 = (price2 = 500) => {
+if(price2 != 1000 && price2 != 999 && price2 >= 1001 && price2 <= 1899 )
+console.log('ціна товару не знаходиться між 1000 та 1900 включно');
+else console.log(price2)
+}
+Price1Func2();
+
 
 // # 4
 
 /* За номером пори року вивести назву цієї пори року використовуючи оператор if-else-if
 Результат виводити в консоль. */
 
+/* 
 let season = 4;
-
 if( season === 1) {
 console.log('winter');
 } else if ( season === 2) {
@@ -54,8 +92,24 @@ else if ( season === 3) {
 console.log('summer');
 }
 else if ( season === 4) {
-console.log('autumn');
+console.log('autumn'); } 
+*/
+
+
+const SeasonFunc = (season = 4) => {
+    if( season === 1) {
+        console.log('winter');
+        } else if ( season === 2) {
+        console.log('spring');
+        }
+        else if ( season === 3) {
+        console.log('summer');
+        }
+        else if ( season === 4) {
+        console.log('autumn');
+        }
 }
+SeasonFunc();
 
 // # 5
 
@@ -65,10 +119,10 @@ console.log('autumn');
 Використати вкладені оператори if
 Результат виводити в консоль. */
 
+/*
 let a = 2,
 b = 1,
 c = 3;
-
     if ((a - b) * (c - a) >= 0) {              // a >= b and a <= c OR a <= b and a >= c
         console.log(a);
     } else if ((b - a) * (c - b) >= 0) {       // b >= a and b <= c OR b <= a and b >= c
@@ -76,14 +130,28 @@ c = 3;
     } else {
         console.log(c);
     }
+*/
+
+const MiddleNumFUnc = (a = 2, b = 1, c = 3) => {
+    if ((a - b) * (c - a) >= 0) {              
+        console.log(a);
+    } else if ((b - a) * (c - b) >= 0) {       
+        console.log(b);
+    } else {
+        console.log(c);
+    }
+}
+MiddleNumFUnc();
+
+
 
 // # 6
 /* Задано номер дня тижня.
 За заданим номером вивести назву дня тижня використовуючи switch.
 Результат виводити в консоль. */
 
+/*
 let week_number = 4;
-
 switch(week_number) {
 case 1:
     console.log('Monday')
@@ -107,6 +175,35 @@ case 7:
     console.log('Sunday')
     break;
 }
+*/
+
+
+const WeekFunc = (week_number = 4) => {
+    switch(week_number) {
+        case 1:
+            console.log('Monday')
+            break;
+        case 2:
+            console.log('Tuesday')
+            break;
+        case 3:
+            console.log('Wednesday')
+             break;
+        case 4:
+             console.log('Thursday')
+            break;
+        case 5:
+            console.log('Friday')
+            break;
+        case 6:
+            console.log('Saturday')
+            break;
+        case 7:
+            console.log('Sunday')
+            break;
+        }
+}
+WeekFunc();
 
 // # 7 
 
@@ -114,6 +211,7 @@ case 7:
 Математичні операції для обчислення: "+", "-", "*", "/".
 Результат виводити в консоль. */ 
 
+/* 
 let math = 4,
     a1 = 2,
     b1 = 4;
@@ -129,15 +227,43 @@ case 4: c = a1 * b1;
 break;
 }
 console.log(c);
+*/
+
+const MathFunc = (math = 4, a1 = 2, b1 = 4, c = 0) => {
+switch(math) {
+case 1: c = a1 + b1;
+break;
+case 2: c = a1 - b1;
+break;
+case 3: c = a1 / b1;
+break;
+case 4: c = a1 * b1;
+break;
+}
+console.log(c);
+}
+MathFunc();
+
 
 // # 8
 
 // Використовуючи властивості рядків (тип string), та регулярний вираз (regular expression) видалити голосні букви зі слова.
 
+/*
 let sometext = "Hello";
 let result = sometext.replace("Hello", 'hll');
 console.log(result);
+*/
+const TextFunc = (sometext= "Hello", result, result1, result2, result3) => {
+     result = sometext.substring(0, sometext.length - 1)
+     result1 = sometext.substring(2, 4)
+     result2 = sometext.substring(0, 1)
+     result3 = result2 + result1;
+    console.log(result3);
+}
+TextFunc();
 
+/// console.log(sometext.substring(0, sometext.length - 3));
 // # 9
 
 /*  Використовуючи оператор if реалізувати логіку переводу метрів в кілометри,
@@ -147,15 +273,4 @@ console.log(result);
 https://www.kyivdictionary.com/uk/words/conjugation/?word=%D0%BC%D0%B5%D1%82%D1%80&lang=uk
 */
 
-let m = 10000;
-km = m / 1000;
-console.log(km);
-if( km >= 10 ) {
-console.log('кілометрів');
-} else if ( km < 0) {
-  console.log('кілометрів');
-} else if ( km = 1) {
-console.log('кілометр');
-} 
-
-// іншого рішення незнайшов, знаю що воно неправильне
+/*-----------------------немає------рішення---задачі---------------------------------*/
