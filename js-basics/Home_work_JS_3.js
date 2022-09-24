@@ -210,7 +210,7 @@
   ]
   let number = 1355;
   
-  const findProductById = (productId: 1355) 5131, 6134, products) => {
+  const findProductById = (productId) => {
   switch(number){
     case 1355:
         console.log('phone')
