@@ -1,4 +1,4 @@
- /// <reference types="cypress"/>
+ // <reference types="cypress"/>
 it("Homework_1", () => {
     cy.visit('https://sanitarskyi-ngx-admin.herokuapp.com');
     cy.viewport(1920, 1080);

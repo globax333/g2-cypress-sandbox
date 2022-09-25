@@ -1,7 +1,7 @@
 // <reference types="cypress"/>
 
 
-const testWithParams = ({arg, expected}) =>
+const testWithParams = ({arg, expected}) => 
 function(){
     cy.visit('https://google.com/');
     cy.get('input.gLFyf.gsfi').clear().type(arg[0]);
@@ -14,7 +14,7 @@ function(){
 
 it('first', testWithParams({arg: ['1', '2', '3'], expected: ['1' , '2', '3']}));
 it('second', testWithParams({arg: '2', expected: '2'}));
-it('third', testWithParams({arg: '3', expected: '3'}));
+it('third', testWithParams({arg: '3', expected: '3'})) 
 
 // другий варіант
 

@@ -1,4 +1,4 @@
- /// <reference types="cypress"/>
+ // <reference types="cypress"/>
 it("Locators CSS", () => {
     cy.visit('https://sanitarskyi-cypress-g2.herokuapp.com/commands/querying');
     // Локатор по назві тегу
