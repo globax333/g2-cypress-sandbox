@@ -1,4 +1,4 @@
-///<reference types="cypress"/>
+
 
 it('quering elements', () => {
     cy.visit('http://localhost:8080/commands/querying');
