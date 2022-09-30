@@ -110,21 +110,36 @@
   *
   * 5. Поверніть з функції новий масив. Результат роботи функції виведіть у консоль.
   */
-   let ArrCars = []
-       ArrCars[0] = {
-        carBrand: "Renault" }
-       ArrCars[1] = {
-        price: 10000 }
-       ArrCars[2] = {
-        isAvailableForSale: true }
+   const cars = [
+    {
+    carBrand: 'BMW',
+    price: 12000,
+    isAvailableForSale: true,
+    },
+    {
+    carBrand: 'Honda',
+    price: 10000,
+    isAvailableForSale: false,
+    },
+    {
+    carBrand: 'Toyota',
+    price: 8000,
+    isAvailableForSale: true,
+    },
+    ]
   
      const CarFunc = () => {
-       ArrCars[3] = {
-        fuel: 'disel'}
-        return ArrCars;
-      };
+      cars.push(
+      {
+        carBrand: 'Renault',
+        price: 10000,
+        isAvailableForSale: true,
+        });
+        console.log(cars);
+      }
       CarFunc();
-    console.log(ArrCars);
+      console.log(CarFunc);
+
   
   
   /** ЗАВДАННЯ 7
@@ -152,15 +167,13 @@
         key4: null,
         key10: NaN,
      }
+     let key = 'key3'
      const KeyFunc = () => {
-     if(myObject.key3 = 'abc')
-     console.log(myObject.key3);
-  
-  
-    if (isNaN(myObject.key10)) {
-      console.log('NaN') } 
-      else {console.log('Not a NaN')}
-     }   
+      if (key === 'key3' || key === 'key10') {
+        console.log(myObject.key3)  
+        console.log(myObject.key10)  
+        }
+      }
      KeyFunc();
   
   
@@ -197,7 +210,7 @@
   ]
   let number = 1355;
   
-  const findProductById = () => {
+  const findProductById = (productId) => {
   switch(number){
     case 1355:
         console.log('phone')
@@ -217,6 +230,18 @@
   findProductById();
   
   
+
+
+
+
+
+
+
+
+
+
+
+
   
   /** ЗАВДАННЯ 9
   *

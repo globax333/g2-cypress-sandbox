@@ -52,7 +52,8 @@
     "semantic-release": "19.0.3",
     "start-server-and-test": "1.10.6",
     "stop-build": "1.1.0",
-    "yaml-lint": "1.7.0"
+    "yaml-lint": "1.7.0",
+    "cypress": "^10.8.0"
   },
   "engines": {
     "node": ">=12"
