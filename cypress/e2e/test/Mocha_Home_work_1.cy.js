@@ -28,6 +28,6 @@ params2.forEach(({email, expected_email, password, expected_password }) => {
         cy.get('#inputEmail1').should('contain.value', expected_email[1]);
         cy.get('#inputPassword2').clear().type(password[1]); 
         cy.get('#inputPassword2').should('contain.value', expected_password[1]);
-
+ 
     })
 })
