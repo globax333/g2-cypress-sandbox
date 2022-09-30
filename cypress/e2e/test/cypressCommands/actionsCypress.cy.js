@@ -1,36 +1,58 @@
 
 
-it('quering elements', () => {
-    cy.visit('http://localhost:8080/commands/querying');
-
-    cy.get('#query-btn').should('contain', 'Button');
-
-    cy.get('.query-list').contains('bananans').should('have.class', 'third');
+it('Search', () => {
+    cy.visit('http://localhost:8080/commands/actions');
     
-    cy.contains('bannanas').should('have.class', 'third')
+    cy.get('#email1', {timeoout: 300})
+    .type('dfsd')   // введення
+    .should('have.value', 'dfsd')
+ 
+    cy.get('#email1')
+    .clear()
+    .type('S{leftarrow}E{leftarrow}T{rightarrow}T{rightarrow}', {delay: 100}) /// можна імітувати введеня клавіш + встановлювати затримку
+    .type('{selectAll} {backspace}')  //// + становлювати затримку
 
-    cy.contains('li', 'bananas').should('have.class', 'third');
+    cy.get('textarea[disabled="disabled"]')
+    .type('dsfsdf', {force: true});
 
-    cy.get('li:contains("bananas")').should('have.class', 'third');
+    cy.get('#password1')
+    .focus()                //// Фокус на полі світиться оранжевим
+    .prev()
+    .should('have.attr', 'style')
+    .and('eq', 'color: orange;')
 
-    cy.get('.query-form').within(() => {
-        cy.get('#inputEmail').should('exist');
-        cy.get('#inputPassword').should('exist');
+    /*cy.get('#couponCode1')
+    .type('some text')
+    .closest('form')  /// найближчий елемент
+    .submit();    ///відправка форми
+*/
+    cy.get('div.well')
+    .eq(4)
+    .should('not.contain', 'Your form has been submitted!')
+    .find('#couponCode1')
+    .type('some text')
+    .closest('form')
+    .submit()
+    .siblings()
+    .should('contain', 'Your form has been submitted!');
 
-        cy.get('')
+    cy.get('#action-canvas').click(125, 125)
+    cy.get('#action-canvas').click(15, 15)
+
+    cy.get('.label.label-primary').click( {multiple: true})
+
+    cy.get('.btn.btn-lg.btn-primary')
+    .click({force: true})
+
+    cy.get('.action-checkboxes [value="checkbox1"]')
+    .should('be.not.checked')
+    .check()
+    .should('be.checked')
+
+    cy.get('.action-checkboxes [value="checkbox2"]')
+    .should('be.disabled')
+    .check({force: true})
+    .should('be.checked', 'disabled')
+
     })
-    cy.root().should('contain', 'apples');
-
-    })
-
-    it('commands to find elements', () => {
-
-        cy.visit('http://localhost:8080/commands/Traversal')
-        cy.get('ol.traversal-breadcrumb breadcrumb').children('.active');
-
-        cy.get('.travelsar-badge').closest('ul').should('have.class', 'list-group');
-
-        cy.contains
-
-
-    })
+    
