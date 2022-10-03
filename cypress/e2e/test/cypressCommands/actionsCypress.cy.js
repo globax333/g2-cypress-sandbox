@@ -3,7 +3,7 @@
 it('Search', () => {
     cy.visit('http://localhost:8080/commands/actions');
     
-    cy.get('#email1', {timeoout: 300})
+    cy.get('#email1', {timeout: 300})
     .type('dfsd')   // введення
     .should('have.value', 'dfsd')
  
